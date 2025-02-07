@@ -111,15 +111,26 @@ body {
   */
 }
 
-@media only screen and (max-width: 600px) {
-  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
-.flowers {
-      font-size: 14px;
-      margin-bottom: 35%;
-      letter-spacing: 3px;
-      transform: scale(1.0);
+.onlycellphone {
+  display: none;
 }
 
+@media (max-width: 767px) {
+  /* Estilos específicos para dispositivos con un ancho máximo de 600px */
+  .flowers {
+        font-size: 14px;
+        letter-spacing: 3px;
+        transform: scale(1.0);
+  }
+
+  body {
+    min-height: 100vh;
+    overflow: scroll;
+  }
+
+  .onlycellphone {
+    display: block; /* Show the element on mobile devices */
+  }
 }
 
 .flower {
