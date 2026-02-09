@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+    body { background: #0f0c29; color: white; font-family: 'Montserrat', sans-serif; margin: 0; overflow-x: hidden; }
+    .timeline { position: relative; max-width: 900px; margin: 50px auto; padding: 20px; }
+    .timeline::after { content: ''; position: absolute; width: 2px; background: rgba(255,255,255,0.1); top: 0; bottom: 0; left: 50%; }
+    .momento { padding: 40px 0; position: relative; width: 50%; opacity: 0; transition: all 1s ease; transform: translateY(30px); }
+    .momento.visible { opacity: 1; transform: translateY(0); }
+    .izquierda { left: 0; text-align: right; padding-right: 30px; }
+    .derecha { left: 50%; text-align: left; padding-left: 30px; }
+    .contenido-multimedia { background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+    img, video { width: 100%; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+    h3 { font-family: 'Dancing Script', cursive; color: #ff85a2; font-size: 1.8rem; margin: 10px 0; }
+    p { font-style: italic; line-height: 1.6; color: #ddd; font-size: 0.95rem; }
+    .year-marker { text-align: center; font-size: 3rem; font-family: 'Dancing Script'; margin: 80px 0; color: #fff; text-shadow: 0 0 15px rgba(255,133,162,0.5); }
+    .btn-volver { display: block; margin: 50px auto; padding: 15px 40px; background: #e40e3d; color: white; border: none; border-radius: 50px; font-size: 1.2rem; cursor: pointer; font-family: 'Montserrat'; transition: 0.3s; }
+    
+    /* REGLA PARA MÓVIL EN TIMELINE */
+    @media (max-width: 600px) {
+        .timeline::after { left: 20px; }
+        .momento { width: 100%; left: 0 !important; text-align: left !important; padding: 20px 0 20px 40px; }
+        .year-marker { font-size: 2rem; margin: 40px 0; }
+    }
+</style>
+</head>
+<body>
+
+    <div class="year-marker">2024: Donde todo nació</div>
+    <div class="timeline">
+        <div class="momento izquierda">
+            <div class="contenido-multimedia">
+                <img src="img/1.jpg">
+                <h3>El primer instante</h3>
+                <p>"Donde todo comenzó... no sabía que en esta foto estaba viendo el resto de mi vida."</p>
+            </div>
+        </div>
+        <div class="momento derecha">
+            <div class="contenido-multimedia">
+                <video controls><source src="img/Sonrisa.mp4"></video>
+                <h3>Tu risa, mi melodía</h3>
+                <p>"Si pudiera atrapar este sonido y guardarlo en un frasco, sería tu risa ese día."</p>
+            </div>
+        </div>
+        <div class="momento izquierda">
+            <div class="contenido-multimedia">
+                <img src="img/Propuesta.jpg">
+                <h3>Ese día, nuestro cuando te propuse ser mi novia</h3>
+                <p>"Estabas tan preciosa esa noche, y yo tan nervioso, finalmente mi sueño de ser el hombre de la mujer mas hermosa se habia cumplido desde ese momento"</p>
+            </div>
+        </div>
+        <div class="momento derecha">
+            <div class="contenido-multimedia">
+                <video controls><source src="img/amarrada.mp4"></video>
+                <h3>Efectivamente, Amarrada</h3>
+                <p>"Me dio bastante risa eso que dijiste, porque yo me amarre desde el instante que vi con tu carita bien preciosa."</p>
+            </div>
+        </div>
+        
+        <div class="momento izquierda">
+            <div class="contenido-multimedia">
+                <img src="img/PrimerAni.jpg">
+                <h3>Nuestro Primer Aniversario</h3>
+                <p>"Aun habiendo pasado un mes, yo ya me empece a sentir el hombre mas afortunado por tenerte, lo celebro los 27 cada mes, por que me recuerda lo especial que eres para mi."</p>
+            </div>
+        </div>
+
+
+        <div class="momento derecha">
+            <div class="contenido-multimedia">
+                <video controls><source src="img/locurita2024.mp4"></video>
+                <h3>Nuestras Locuras</h3>
+                <p>"Si existiera una palabra para describir lo súper que la paso contigo, tendría que inventarse hoy mismo, porque "perfección" se queda corta y "magia" suena a poco."</p>
+            </div>
+        </div>
+        
+        <div class="momento izquierda">
+            <div class="contenido-multimedia">
+                <img src="img/Navidad1.jpg">
+                <h3>Nuestra Primera Navidad</h3>
+                <p>"Jamás habia sentido que es pasar la navidad con pareja y me alegro que mi primera vez sea contigo, porque tu eres el amor de mi vida."</p>
+            </div>
+        </div>
+
+        <div class="year-marker">2025: Creciendo juntos</div>
+        
+        <div class="momento izquierda">
+            <div class="contenido-multimedia">
+                <img src="img/cadalugar.jpeg">
+                <h3>Mi lugar favorito</h3>
+                <p>"En cada lugar que visitamos, mi parte favorita siempre fuiste tú."</p>
+            </div>
+        </div>
+        <div class="momento derecha">
+            <div class="contenido-multimedia">
+                <video controls><source src="img/Diente.mp4"></video>
+                <h3>Sosteniéndonos</h3>
+                <p>"Aprendimos que querernos no es solo estar en las buenas, es sostenernos fuerte cuando el mundo se pone difícil, Que sepas que, SIEMPRE estaré para TÍ"</p>
+            </div>
+        </div>
+        <div class="momento izquierda">
+            <div class="contenido-multimedia">
+                <video controls><source src="img/comida.mp4"></video>
+                <h3>Pequeños detalles</h3>
+                <p>"La felicidad no es el destino, es cada comida y cada sonrisa a tu lado."</p>
+            </div>
+        </div>
+
+        <div class="momento derecha">
+            <div class="contenido-multimedia">
+                <video controls><source src="img/locurita2025.mp4"></video>
+                <h3>Felicidad</h3>
+                <p>"Eres mi defición favorita de FELICIDAD."</p>
+            </div>
+        </div>
+
+        <div class="momento izquierda">
+            <div class="contenido-multimedia">
+                <img src="img/mirada.jpg">
+                <h3>Aventura sin fin</h3>
+                <p>"Cada día contigo es una nueva página del libro que nunca quiero terminar."</p>
+            </div>
+        </div>
+
+        <div class="momento derecha">
+            <div class="contenido-multimedia">
+                <video controls><source src="img/Incomprendidos.mp4"></video>
+                <h3>Incomprendidos</h3>
+                <p>"Porque nuestro amor tiene un lenguaje propio que solo nosotros hablamos."</p>
+            </div>
+        </div>
+
+        <div class="year-marker">2026: Nuestro presente</div>
+        <div class="momento izquierda">
+            <div class="contenido-multimedia">
+                <video controls><source src="img/bailando.mp4"></video>
+                <h3>El eco de nosotros</h3>
+                <p>"Ver este video me recuerda que la felicidad es este momento exacto contigo."</p>
+            </div>
+        </div>
+        <div class="momento derecha">
+            <div class="contenido-multimedia">
+                <img src="img/juntos.jpeg">
+                <h3>Tres años después</h3>
+                <p>"Aún siento el mismo salto en el corazón cada vez que pronuncias mi nombre."</p>
+            </div>
+        </div>
+        <div class="momento izquierda">
+            <div class="contenido-multimedia">
+                <img src="img/juntos3.jpeg">
+                <h3>Hacia el futuro</h3>
+                <p>"Mirar atrás me hace llorar de alegría, pero mirar adelante contigo me hace sonreír con paz."</p>
+            </div>
+        </div>
+        <div class="momento derecha">
+            <div class="contenido-multimedia">
+                <img src="img/juntos2.jpeg">
+                <h3>Por siempre</h3>
+                <p>"Lo mejor de 2026 es que todavía nos queda toda una vida por delante. Estoy eternamente agradecido con Diosito por haber cumplido mi sueño mas grande, TÚ"</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn-volver" onclick="window.close()">Ya recordé por qué te amo... Volver ❤️</button>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.momento').forEach(m => observer.observe(m));
+    </script>
+</body>
+</html>
