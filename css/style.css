@@ -1,100 +1,154 @@
+:root {
+    --color-principal: #e40e3d;
+    --color-vidrio: rgba(255, 255, 255, 0.25);
+    --sombra: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
 
-body{
-    color: rgb(184, 36, 36);
-    background-color: rgb(236, 190, 231);
-    width: 100%;
-    height: 100vh;
+body, html { 
+    margin: 0; padding: 0; width: 100%; height: 100%; 
+    overflow: hidden; font-family: 'Montserrat', sans-serif; 
+}
+
+.screen { 
+    position: absolute; width: 100%; height: 100%; 
+    display: flex; justify-content: center; align-items: center; 
+}
+
+
+
+/* FONDO ANIMADO ORIGINAL */
+.background-animate {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%; animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG { 
+    0% { background-position: 0% 50%; } 
+    50% { background-position: 100% 50%; } 
+    100% { background-position: 0% 50%; } 
+}
+
+/* TARJETA BASE (Para Login y Pregunta) */
+.glass-card {
+    background: var(--color-vidrio); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px; 
+    border: 1px solid rgba(255,255,255,0.18); 
+    padding: 30px;
+    text-align: center; 
+    max-width: 450px; 
+    width: 90%; 
+    color: white; 
+    box-shadow: var(--sombra);
+}
+
+/* TARJETA ESPECÍFICA PARA LA CARTA (Solo esta lleva scroll) */
+#pantalla-final .glass-card {
+    max-height: 80vh; 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Dancing Script', cursive;
 }
 
-.botones{
-    padding: 9px;
-    border-radius: 80px;
-    background-color: transparent;
-    border: none;
-    font-size: 2rem;
+/* CONTENEDOR DE SCROLL */
+.carta-container {
+    overflow-y: auto; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.carta-container::-webkit-scrollbar { display: none; }
+
+/* TEXTOS */
+h1, h2, .titulo-final { font-family: 'Dancing Script', cursive; font-size: 2.8rem; margin: 15px 0; }
+/* Busca esta sección en tu CSS y actualízala así: */
+.titulo-final { 
+    color: white; /* Cambiado de #ff85a2 a white */
+    letter-spacing: 2px; 
+    margin: 15px 0; /* Mantenemos el margen que ya tenías */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Opcional: un brillo blanco suave */
+}
+.texto-emotivo {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    font-style: italic;
+    padding-bottom: 20px;
 }
 
-.mover {
-    position: absolute;
-}
+.corazon-superior { font-size: 2rem; margin-bottom: 10px; animation: pulse 2s infinite; }
 
-.botones a{
-    background-color: #e0a9a9;
-    padding: 9px;
-    border-radius: 80px;
-    -webkit-border-radius: 80px;
-    -moz-border-radius: 80px;
-    -ms-border-radius: 80px;
-    -o-border-radius: 80px;
-}
-
-
-.titulo-principal{
-    color: #e40e3d;
-}
-
-.greetings{
-    font-size: 5rem;
-    font-weight: 500;
-}
-.greetings > span{
-    animation: glow 2.5s ease-in-out infinite;
-}
-@keyframes glow{
-    0%, 100%{
-        color: #fff;
-        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
-    }
-    10%, 90%{
-        color: #111;
-        text-shadow: none;
-    }
-}
-.greetings > span:nth-child(2){
-    animation-delay: .2s ;
-}
-.greetings > span:nth-child(3){
-    animation-delay: .4s ;
-}
-.greetings > span:nth-child(4){
-    animation-delay: .6s;
-}
-.greetings > span:nth-child(5){
-    animation-delay: .8s;
-}
-.greetings > span:nth-child(6){
-    animation-delay: 1s;
-}
-
-.description{
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    margin: 20px;
-}
-
-.button a{
-    text-decoration: none;
+/* BOTONES E INPUTS (Basados en tu imagen) */
+.input-romantico { 
+    padding: 12px; 
+    border-radius: 10px; 
+    border: none; 
+    margin-bottom: 20px; 
+    width: 85%; 
+    text-align: center;
     font-size: 1rem;
-    color: #111;
 }
 
-@media screen and (max-width:574px){
-    .greetings{
-        display: block;
-        font-size: 4rem;
-        font-weight: 800;
-        text-align: center;
+.btn-principal { 
+    background: var(--color-principal); 
+    color: white; 
+    padding: 12px 30px; 
+    border: none; 
+    border-radius: 50px; 
+    cursor: pointer;
+    width: 100%; /* Para que se vea como en tu captura */
+    max-width: 300px;
+    font-weight: bold;
+}
+
+.btn-secundario { background: #555; color: white; padding: 10px 20px; border: none; border-radius: 50px; }
+
+/* POLAROIDS */
+.polaroid { 
+    position: absolute; background: white; padding: 10px 10px 25px 10px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 160px; 
+    cursor: grab; z-index: 50; filter: sepia(0.2) contrast(1.1);
+}
+.polaroid img { width: 100%; height: 130px; object-fit: cover; }
+.polaroid p { color: #333; font-family: 'Dancing Script'; margin-top: 10px; font-size: 1rem; }
+.polaroid:hover { filter: none; transform: scale(1.05) rotate(0deg) !important; transition: 0.5s; }
+
+.p1 { top: 10%; left: 5%; transform: rotate(-10deg); }
+.p2 { top: 15%; right: 5%; transform: rotate(15deg); }
+.p3 { bottom: 10%; left: 10%; transform: rotate(-5deg); }
+
+/* ANIMACIONES */
+.heart-pulse { width: 80px; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+#canvas-galaxia { position: fixed; top: 0; left: 0; z-index: -1; }
+
+/* AJUSTES EXCLUSIVOS PARA MÓVIL (Teléfonos) */
+@media (max-width: 600px) {
+    /* 1. Ajuste de la tarjeta para que no choque con las fotos superiores */
+    #pantalla-final .glass-card {
+        margin-top: 120px; /* Empuja la carta hacia abajo para dar espacio a las fotos */
+        max-height: 65vh;  /* Ajustamos la altura para que quepa todo en pantalla */
+        width: 90%;
+        padding: 15px;
     }
-    .description{
-        font-size: 2rem;
+
+    /* 2. Reposicionamiento de las Polaroids al tope de la página */
+    .polaroid { 
+        width: 85px; /* Tamaño reducido para que quepan las 3 arriba */
+        padding: 5px 5px 12px 5px;
+        position: fixed; /* Las fijamos arriba */
+        z-index: 100;    /* Siempre por encima del fondo */
     }
-    
-    .button a{
-        font-size: 1rem;
-    }
+
+    .polaroid img { height: 70px; } /* Ajuste de altura de imagen */
+    .polaroid p { display: none; }  /* Ocultamos el texto en móvil para ahorrar espacio */
+
+    /* Distribución horizontal al tope */
+    .p1 { top: 15px; left: 5%; transform: rotate(-5deg) !important; }
+    .p2 { top: 10px; left: 50%; transform: translateX(-50%) rotate(0deg) !important; }
+    .p3 { top: 15px; right: 5%; transform: rotate(5deg) !important; }
+
+    /* 3. Ajustes de texto para mejor lectura */
+    h1, h2, .titulo-final { font-size: 1.6rem; }
+    .texto-emotivo { font-size: 1.1rem; line-height: 1.6; }
 }
