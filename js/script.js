@@ -63,17 +63,17 @@ $(document).ready(function() {
         }
         draw();
     }
-function escribirCarta() {
+
+    function escribirCarta() {
         const texto = [
-            "Elizabeth...",
             "Me detuve un momento a mirar las estrellas y entendí algo...",
             "Que ninguna de ellas brilla tanto como tus ojos cuando te ríes.",
             "A veces me pregunto qué hice bien para merecer que camines a mi lado.",
-            "Gracias por estos 3 años, por los días grises donde me sostuviste...",
+            "Gracias a Dios y a tí por estos 3 años, por los días grises donde me sostuviste...",
             "y por los días brillantes donde fuiste mi sol.",
             "Si me dieran a elegir mil vidas más,",
             "en las mil te buscaría a ti...",
-            "Te amo con toda mi alma, mi vida entera. ❤️"
+            "Te amo con toda mi alma, porque eres todo lo que siempre soñé. ❤️"
         ];
 
         let lineaActual = 0;
